@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>marcyperlaan</title>
+
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+	<style type="text/css">
+		nav a{
+/*display: inline-block;*/
+ background-color: white;
+}
+.Logo img:hover{
+		transform: rotate(360deg);
+		transition: all 0.5s;
+		}
+
+.text {
+
+  position: relative; /* Asegura que el elemento tenga una posición relativa */
+  z-index: 2; /* Coloca el elemento por encima de otros elementos */
+  /* Otros estilos de tu elección */
+}
+
+
+
+	</style>
+</head>
+
+<body>
+<header>
+	<a href="index.html" class="Logo" id="logo">
+	<img src="https://marcyperlaan.github.io/migaleria/comun/Logo.png"></a>
+
+	<button class="iconoHamburguesa" id="ih" >
+	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+	<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+	</svg>
+	</button>
+<div id="fondo"></div>
+
+	<nav class="menuPrincipal">
+		<ul>
+			<li><a href="tattoo.html" onmouseover="aplicarHover(1);"onmouseout="quitarHover(1);" id="e1">TATTOO</a></li>
+
+			<li><a href="fineart.html" onmouseover="aplicarHover(2);"onmouseout="quitarHover(2);" id="e2">FINE ART</a></li>
+
+			<li><a href="digital.html" onmouseover="aplicarHover(3);" onmouseout="quitarHover(3);" id="e3">DIGITAL</a></li>
+		</ul>
+		
+	</nav>	
+	<br>
+</header>
+
+<main class="container"> 
+    	<div class="rectangulo" class="tattoo" onclick="cambiarTextoYRedirigir(1);">
+        <a href="#">
+        <img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/39.png" id="r1">
+        </a>
+    	</div>
+
+    	<div class="rectangulo" onclick="cambiarTextoYRedirigir(2);">
+        <a href="#">
+            <img src="https://marcyperlaan.github.io/migaleria/fineart/2010/54.png" id="r2">
+        </a>
+    	</div>
+
+    	<div class="rectangulo" onclick="cambiarTextoYRedirigir(3);">
+        <a href="#">
+            <img src="https://marcyperlaan.github.io/migaleria/digital/2020/0.png" id="r3">
+        </a>
+    	</div>
+
+</main>
+
+<footer>
+			<a href="contact.php" class="mail">
+	   	  		<img src="https://marcyperlaan.github.io/migaleria/comun/mail.png" class="mail">
+	   	  	</a>
+	   	 	<div class="presentacion">
+				<p class="text"  id="textoFooter">
+				
+					🏡 Welcome...<br>to the online portfolio designed by Marc-Pieter. <br> Enjoy his art world and experience the essence of each creative journey.<br>
+					This website is a canvas that evolves with time, capturing the spirit of life.
+
+					<br>
+   					
+<br>
+   						<span id="year" ></span>
+   						<br>
+   					
+					<span id="weekNumber" >Week 1</span>
+   				
+
+				</p>
+				
+			 <div id="footerImage"></div>
+			</div>
+
+</footer>
+
+	<script src="js/main.js"></script>
+	
+<script>
+function getWeeksDifference() {
+    const today = new Date();
+    const targetDate = new Date(today.getFullYear(), 0, 4); // 4 de enero de 2023
+
+    const daysDifference = (today - targetDate) / (1000 * 60 * 60 * 24); // Diferencia en días
+    const weeksDifference = Math.floor(daysDifference / 7); // Diferencia en semanas
+
+    return weeksDifference + 1; // Agregamos 1 para la semana actual
+}
+
+function updateCatalanWeekNumber() {
+    const weekNumberElement = document.getElementById('weekNumber');
+    const currentWeek = getWeeksDifference();
+    weekNumberElement.textContent = `Week ${currentWeek}`;
+}
+
+// Llama a la función para actualizar el número de semana al cargar la página.
+updateCatalanWeekNumber();
+
+// Establece un temporizador para actualizar el número de semana cada semana (604800000 ms = 7 días).
+setInterval(updateCatalanWeekNumber, 604800000);
+
+
+
+
+function updateYear() {
+    const yearElement = document.getElementById("year");
+    const currentYear = new Date().getFullYear();
+    if (yearElement.textContent !== currentYear.toString()) {
+        yearElement.textContent = currentYear;
+    }
+}
+
+// Llama a la función para actualizar el año al cargar la página.
+updateYear();
+
+// Establece un temporizador para actualizar el año una vez al año.
+setInterval(updateYear, 31536000000); // 1 año en milisegundos
+
+
+// Obtén el botón de hamburguesa y la imagen del footer
+const ih = document.getElementById("ih");
+const footerImage = document.getElementById("footerImage");
+
+let rotationDeg = 0;
+
+// Agrega un evento de clic al botón de hamburguesa
+ih.addEventListener("click", () => {
+  // Cambia la dirección de rotación en función del valor actual de rotationDeg
+  if (rotationDeg === 0) {
+    rotationDeg = 360;
+  } else {
+    rotationDeg = 0;
+  }
+
+  // Aplica la nueva rotación a la imagen del footer
+  footerImage.style.transform = `rotate(${rotationDeg}deg)`;
+});
+
+
+
+
+function aplicarHover(seccion) {
+    document.getElementById('r' + seccion).style.opacity = 1;
+    document.getElementById('e' + seccion).style.backgroundColor = '#666';
+    document.getElementById('e' + seccion).style.color = 'white';
+    document.getElementById('e' + seccion).style.boxShadow = '0px 0px 5px rgba(0, 0, 0, 0.5)'; // Añade una sombra
+    document.getElementById('textoFooter').innerHTML = textos[seccion - 1];
+}
+
+function quitarHover(seccion) {
+       document.getElementById('r'+seccion).style.opacity=0.3;
+      document.getElementById('e'+seccion).style.backgroundColor='whitesmoke';
+      document.getElementById('e'+seccion).style.color='#333';
+       document.getElementById('e' + seccion).style.boxShadow = 'none'; // Quita la sombra al quitar el hover
+       document.getElementById('textoFooter').innerHTML= textos[0];
+     }
+//const boton = document.querySelector(".iconoHamburquesa");
+//const nav = document.querySelector(".menuPrincipal");
+
+</script>
+  
+</body>
+	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
