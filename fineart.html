@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>fineart</title>
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+	<style>
+		header{
+		background-image: none;
+		background-color: darkgrey;
+		display: flex;
+		}
+	
+		.Logo img:hover{
+		transform: rotate(360deg);
+		transition: all 1s;
+		}
+
+		#gal {
+		position: relative; /* Permite posicionar el botón con respecto al contenedor */
+		bottom: 0; /* Lo mantiene pegado en la parte inferior del contenedor */
+		left: 0; /* Lo mantiene en la esquina derecha */
+		margin: 0 auto; /* Espacio opcional alrededor del botón para que no esté pegado a los bordes */
+ 		/*transform: scale(0.95); *//* Debe ser "transform" en lugar de "scale" */
+		}
+
+		.galerias {
+  	display: flex;
+  	justify-content: center; /* Centra horizontalmente */
+  	align-items: flex-end; /* Alinea en la parte inferior (pegado abajo) */
+  	height: calc(100vh/9); /* Altura del contenedor de galerías */
+  	position: relative;
+		}
+		.galerias table {
+  	width: 100%;
+  	border-collapse: collapse;
+ 		
+		}
+
+		.galerias td {
+  	text-align: center;
+   	/*padding: 10px;*/
+  	/*border: 1px solid #ddd;*/
+  	/*background-color: pink;*/
+		}
+
+		.galerias .anio {
+  	background-color: darkgrey;
+  	color: black;
+		}
+		/*.galerias .triangleup {
+  	cursor: pointer;
+  	vertical-align: bottom;
+		}*/
+
+		.carrousel, .activo{
+		background-color: pink;
+		}
+
+  </style>
+	</head>
+
+<body>
+<header>
+<a href="index.html" class="Logo" id="logo">
+<img src="https://marcyperlaan.github.io/migaleria/comun/Logo.png"></a>
+          
+<div class="galerias" id="gal">
+  <table>
+    <tr>
+      <td class="anio">2000</td>
+      <td></td> <!-- Celda vacía -->
+      <td class="anio">2010</td>
+      <td></td> <!-- Celda vacía -->
+      <td class="anio">2020</td>
+      <td></td> <!-- Celda vacía -->
+      <td class="anio">2030</td>
+      <td></td> <!-- Celda vacía -->
+      <td class="anio">2040</td>
+      <td></td> <!-- Celda vacía -->
+      <td class="anio">2050</td>
+    </tr>
+
+    <td>|</td>
+		<td></td>
+		<td>|</td>
+		<td></td>
+		<td>|</td>
+		<td></td>
+		<td>|</td>
+		<td></td>
+		<td>|</td>
+		<td></td>
+		<td>|</td>
+		<td></td>
+		</tr>
+
+    <tr>
+      <td></td> <!-- Celda vacía para dejar espacio -->
+      <td class="triangleup" onclick="cambiarGaleria(0);">&utrif;</td>
+      <td></td> <!-- Celda vacía para dejar espacio -->
+      <td class="triangleup" onclick="cambiarGaleria(1);">&utrif;</td>
+      <td></td> <!-- Celda vacía para dejar espacio -->
+      <td class="triangleup activo" onclick="cambiarGaleria(2);">&utrif;</td>
+      <td></td> <!-- Celda vacía para dejar espacio -->
+      <td class="triangleup" onclick="cambiarGaleria(3);">&utrif;</td>
+      <td></td> <!-- Celda vacía para dejar espacio -->
+      <td class="triangleup" onclick="cambiarGaleria(4);">&utrif;</td>
+    </tr>
+  </table>
+</div>
+
+
+    <nav>
+	<a href="tattoo.html" onmouseover="aplicarHover(1);"onmouseout="quitarHover(1);" id="e1">TATTOO</a> 
+	<td></td>
+      <a href="fineart.html" onmouseover="aplicarHover(2);"onmouseout="quitarHover(2);" id="e2">
+      <strong>FINE ART</strong></a>
+	<td></td>
+      <a href="digital.html" onmouseover="aplicarHover(3);" onmouseout="quitarHover(3);" id="e3">DIGITAL</a>
+      </nav>		
+
+
+
+
+      	
+</header>
+
+<br>
+
+      <div class="carrousel">
+		<div class="visor">
+			<!-- 2000 -2010 -->
+			<div class="fila">
+				<div class="column">
+					<a href="expo.html?seccion=fineart&anio=2000&img=1">
+						<img src="imagenes/fineart/2000/1.png" alt="still life oil painting from life" loading="lazy"></a>
+					
+				</div>
+				<div class="column">
+					<a href="expo.html?seccion=fineart&anio=2000&img=2">
+						<img src="imagenes/fineart/2000/2.png" alt="Still life oil painting of bones" loading="lazy"></a>
+					
+				</div>
+				<div class="column">
+					<a href="expo.html?seccion=fineart&anio=2000&img=3">
+						<img src="imagenes/fineart/2000/3.png" alt="Serigraphy on papyrus paper designed for Huis-Clos Theater Piece" loading="lazy"></a>
+				</div>
+				
+			</div>
+			<!-- fin  2000 -2010 -->
+
+
+
+			<!-- 2010 -2020 -->
+			<div class="fila">
+				<div class="column">
+					<a href="expo.html?seccion=fineart&anio=2010&img=56">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/56.png" alt="Crosshatching Rose Figure Garden Drawing Fine Art" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=49">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/49.png" alt="Long Pose Dark Red Background Outdoor Indoor Cool Light Warm Shadow Figure Blondie Oil Painting Realistic" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=48">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/48.png" alt="Sketch Study Pencil Figure" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=41">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/41.png" alt="Long Pose Red Background Cool Light Warm Shadow Fine Art Anatomy" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=40">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/40.png" alt="Sketch Figure Greywash Underpainting Linen Canvas" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=33">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/33.png" alt=".Quique clay portrait sculpture with glasses." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=32">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/32.png" alt="Quique  clay Sculpture portrait in 3/4 Black Background." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=25">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/25.png" alt="Pencil Drawing on Watercolor Paper Figure Crosshatching" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=24">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/24.png" alt="2h Figure short pose Study Model From life Lying Down" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=17">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/17.png" alt="The Milkman Oil Painting Fine Art Portrait" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=16">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/16.png" alt="Charcoal of the milkman on toned Watercolor Paper" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=9">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/9.png" alt="Dutch Woman warming her feet oilpainting Fineart" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=8">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/8.png" alt="Longpose Charcoal on toned paper" loading="lazy"></a>
+					
+					<a href="expo.html?seccion=fineart&anio=2010&img=1">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/1.png" alt="Landscape da Bahia Fineart oilpainting on cotton" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=0">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/0.png" alt="Rubens Portrait oilpainting Fineart" loading="lazy"></a>
+					</div>
+
+
+
+				<div class="column">
+					<a href="expo.html?seccion=fineart&anio=2010&img=55">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/55.png" alt="It's been a long time. Fine Art oilpainting realistic Figure Portrait" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=50">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/50.png" alt="Long Pose Red Background Fine Art oilpainting" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=47">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/47.png" alt="Longpose in progress Red background" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=42">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/42.png" alt="Longpose in progress abstract background blue Hair" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=39">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/39.png" alt="Mithological oil painting Homo Fire Figure Bird Wings Flying Landscape Nature" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=34">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/34.png" alt="Realistic Portait Fine Art Light Blue Background" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=31">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/31.png" alt="Still Life" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=26">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/26.png" alt="Charcoal On Grey Paper" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=23">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/23.png" alt="Oil Painting Sketch Figure Standing Front side" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=18">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/18.png" alt="Happy Dog oil painting Realistic Traditional" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=15">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/15.png" alt="Darth Vader Charcoal Drawing in Charcoal on White Paper Academic Cast from Life" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=10">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/10.png" alt="Charles Bargue Back drawing charcoal on cotton paper" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=7">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/7.png" alt="Longpose Charcoal on Watercolor Paper figure Contraposto holding a Stick" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=2">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/2.png" alt="Think out of the box. Oil painting on canvas" loading="lazy"></a>
+					</div>
+
+
+
+				<div class="column">
+					<a href="expo.html?seccion=fineart&anio=2010&img=54">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/54.png" alt="close-up Figure oilpainting on canvas." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=51">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/51.png" alt="figure standing anatomical pose front and black background. Realistic traditional art." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=46">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/46.png" alt="underpainting on linen" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=43">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/43.png" alt="Longpose abstract background and blue hair" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=38">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/38.png" alt="Long pose oil painting on wood figure standing blue background Fine Art" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=35">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/35.png" alt="long pose oilpainting figure women Fine Art" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=30">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/30.png" alt="oilpainting of the men hoLding te arm of the woman. Fine Art." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=27">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/27.png" alt="Longpose realistic Painting Figure standing side part of the body" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=22">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/22.png"  alt="Pear from life in oil paint." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=19">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/19.png"  alt="The milkman walking with the dog. Oil painting on linen." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=14">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/14.png" alt="Longpose standing Contraposto in Charcoal on Toned paper." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=11">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/11.png" alt="Déborah from Life, oilpainting figures on paper sticked on cotton canvas." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=6">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/6.png" alt="Charles bargue arm study Academic Pencil on cotton paper" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=3">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/3.png" alt="Favela do Golf, oilpainting on cottoncanvas. Fineart." loading="lazy"></a>
+					</div>
+
+
+
+				<div class="column">
+					<a href="expo.html?seccion=fineart&anio=2010&img=53">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/53.png" alt="Picture working on my Longpose in the studio" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=52">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/52.png" alt="Longpose study in charcoal and white chalk on grey paper." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=45">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/45.png" alt="mother charcoal drawing on paper." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=44">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/44.png" alt="close-up long pose abstract background. Fine Art." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=37">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/37.png" alt="Close-up Longpose portrait painting in oil." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=36">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/36.png"  alt="Long Pose Full Body Blondie Light background Blue. Realistic Painting in oil." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=29">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/29.png" alt="2 hours Sketch Figure drawing pencil and whitechalk on green paper." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=28">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/28.png" alt="2 hours Figure standing Contraposto Back sketch, pencil and whitechalk on green paper" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=21">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/21.png" alt="Life figure drawing on Handmade cotton toned paper from July 2017." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=20">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/20.png" alt="Portrait realistic From life Red Hair" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=13">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/13.png" alt="Drawing Longpose Charcoal on Toned watercolor and whitechalk." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=12">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/12.png" alt="Landscape Street From Life" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2010&img=5">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/5.png" alt="Father and me, oil Painting on canvas." loading="lazy"></a>
+
+						<a href="expo.html?seccion=fineart&anio=2010&img=4">
+					<img src="https://marcyperlaan.github.io/migaleria/fineart/2010/4.png" alt="Portrait of a little girl in oil paint fineart" loading="lazy"></a>
+					</div>
+				
+			</div>
+			<!-- fin -2010 -2020 -->
+
+
+
+			<!-- 2020 -2030 -->
+			<div class="fila">
+				<div class="column">
+					<a href="expo.html?seccion=fineart&anio=2020&img=40">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/40.png" alt="Portrait Fineart sketch silverpoint on paper sticked on wood and oil paint Imprimatura Underpainting" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=33">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/33.png" alt="Sketch figure back with knife pen and oil on paper FineArt" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=32">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/32.png" alt="Chucky Sketch black and orange pens FINE ART" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=25">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/25.png" alt="Sketch portrait horizontal pencil on paper FineArt." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=24">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/24.png" alt="selfportrait in pen and watercolor on paper Crosshatching realistic Fineart" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=17">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/17.png" alt="silverpoint selfportrait on paper
+					FINE ART" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=16">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/16.png" alt="selfportrait blackpen on paper." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=9">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/9.png" alt="selfportrait blackpen on paper." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=8">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/8.png" alt="Sketch selfportrait black pen on paper." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=1">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/1.png" alt="Biomechanical selfportrait oilpainting on linnen.Fine Art." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=0">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/0.png" alt="Portrait of a Baby Fine Art oilpainting on canvas." loading="lazy"></a>
+				</div>
+
+
+
+				<div class="column">
+					<a href="expo.html?seccion=fineart&anio=2020&img=39">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/39.png" alt="Pen and oil on paper. Biomechanical portrait afro woman." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=34">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/34.png" alt="Tiff  oil portrait on paper. Fine Art " loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=31">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/31.png" alt="Tiff Frazetta and Chucky Portrait Fine Art Black Pen on paper." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=26">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/26.png" alt="Portrait Woman without mask in the Hospital. Fineart Pencil Drawing on paper." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=23">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/23.png" alt="selfportrait color pencils FineArt." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=18">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/18.png" alt="selfportrait blackpen on paper.fineart." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=15">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/15.png" alt="Blackpen on paper Selfportrait in the toilet.Fineart." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=10">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/10.png" alt="selfportrait fineart black pen on paper." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=7">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/7.png" alt="Biomechanical sketch pen colors RGB on paper.FineArt." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=2">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/2.png" alt="Rembrandt Study blackpen on paper.Fineart crosshatching." loading="lazy"></a>
+				</div>
+
+				<div class="column">
+					<a href="expo.html?seccion=fineart&anio=2020&img=38">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/38.png" alt="Woman knife Money Design FineART silverpoint on paper." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=35">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/35.png" alt="Orand and black pen Old Man on paper Fineart." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=30">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/30.png" alt="Nessy Blue Fineart oilpainting on wood." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=27">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/27.png" alt="Silverpoint Portrait Girl on paper." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=22">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/22.png" alt="Portait of an old master black pen sketch crosshatching on paper." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=19">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/19.png" alt="Nessy Blue and me portrait selfportrait Fineart Black and blue Pen on paper." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=14">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/14.png" alt="selfportrait blackpen on paper" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=11">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/11.png" alt="Black Pen on paper selfportrait walking in the street." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=6">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/6.png" alt="Biomechanical sketch Fine Art pen on paper" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=3">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/3.png" alt="Mother oilpainting on linen" loading="lazy"></a>
+				</div>
+
+				<div class="column">
+					<a href="expo.html?seccion=fineart&anio=2020&img=37">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/37.png" alt="Lion Portrait sketch blackpen on paper Fineart." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=36">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/36.png" alt="Landscape FineART oilpainting on wood" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=29">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/29.png" alt="Spirit Figure from life .Black pen and oil.Black pen on paper Fineart." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=28">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/28.png" alt="Musician profile figure from life Black pen on paper" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=21">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/21.png" alt="Silverpoint Lost and not found FineArt on paper." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=20">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/20.png" alt="selfportrait blackpen on paper crosshatching Fall of light background Fineart." loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=13">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/13.png" alt="Sketch selfportrait black pen on paper Fineart" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=12">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/12.png" alt="Black pen on paper Fineart selfportrait Driving with a cap. " loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=5">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/5.png" alt="Catrina portrait oil on canvas Fine Art" loading="lazy"></a>
+
+					<a href="expo.html?seccion=fineart&anio=2020&img=4">
+					<img src="https://marcyperlaan.github.io/migaleria/fineartv2/2020/4.png" alt="Reencarnações. Fine Art 2 figures standing and posing on the beach oilpainting on linen" loading="lazy"></a>
+				</div>
+
+			</div>
+			<!-- fin  2020 -2030 -->
+			<!-- 2030 -2040 -->
+			<div class="fila">
+				
+			</div>
+			<!-- fin  2030 -2040 -->
+			<!-- 2040 -2050 -->
+			<div class="fila">
+			
+			</div>
+			<!-- fin  2040 -2050 -->
+		</div>
+	</div><!--FIN Carrusel -->
+	</div>
+
+<script src="js/main.js"></script>
+
+<script type="text/javascript">
+	//Para que la galería empiece en 2020 - 2030
+	cambiarGaleria(2);
+
+
+	function aplicarHover(seccion) {
+    var elemento = document.getElementById('e' + seccion);
+    
+        var textoFooter = document.getElementById('textoFooter');
+        if (textoFooter) {
+            textoFooter.innerHTML = textos[seccion - 1];
+        }
+    }
+
+
+function quitarHover(seccion) {
+    var elemento = document.getElementById('e' + seccion);
+    if (elemento) {
+       
+        var textoFooter = document.getElementById('textoFooter');
+        if (textoFooter) {
+            textoFooter.innerHTML = '';
+        }
+    }
+}
+
+</script>
+
+</body>
+
+</html>
+
+
