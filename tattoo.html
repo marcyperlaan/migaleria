@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>tattoo</title>
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+		<style>
+			
+			
+			header{
+			display: flex;
+			background-image: none;
+			background-color: darkgrey;
+			}
+
+			.Logo img:hover{
+			transform: rotate(360deg);
+			transition: all 1s;
+			}
+
+		#gal {
+		position: relative; /* Permite posicionar el botón con respecto al contenedor */
+		bottom: 0; /* Lo mantiene pegado en la parte inferior del contenedor */
+		left: 0; /* Lo mantiene en la esquina derecha */
+		margin: 0 auto; /* Espacio opcional alrededor del botón para que no esté pegado a los bordes */
+ 		/*transform: scale(0.95); *//* Debe ser "transform" en lugar de "scale" */
+		}
+.galerias {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: flex-end; /* Alinea en la parte inferior (pegado abajo) */
+  height: calc(100vh/9); /* Altura del contenedor de galerías */
+  position: relative;
+}
+		.galerias table {
+  	width: 100%;
+  	border-collapse: collapse;
+ 		
+		}
+
+		.galerias td {
+  	text-align: center;
+   	/*padding: 10px;*/
+  	/*border: 1px solid #ddd;*/
+  	/*background-color: pink;*/
+		}
+
+		.galerias .anio {
+  	background-color: darkgrey;
+  	color: black;
+		}
+		/*.galerias .triangleup {
+  	cursor: pointer;
+  	vertical-align: bottom;
+		}*/
+
+		.carrousel, .activo{
+		background-color: gainsboro;
+		}
+
+ 		</style>
+	</head>
+
+<body>
+<header>
+			<a href="index.html" class="Logo" id="logo">
+			<img src="https://marcyperlaan.github.io/migaleria/comun/Logo.png" alt="Logo Marc Yperlaan"></a>
+
+	<div class="galerias" id="gal">
+  <table>
+    <tr>
+      <td class="anio">2000</td>
+      <td></td> <!-- Celda vacía -->
+      <td class="anio">2010</td>
+      <td></td> <!-- Celda vacía -->
+      <td class="anio">2020</td>
+      <td></td> <!-- Celda vacía -->
+      <td class="anio">2030</td>
+      <td></td> <!-- Celda vacía -->
+      <td class="anio">2040</td>
+      <td></td> <!-- Celda vacía -->
+      <td class="anio">2050</td>
+    </tr>
+
+   	<td>|</td>
+		<td></td>
+		<td>|</td>
+		<td></td>
+		<td>|</td>
+		<td></td>
+		<td>|</td>
+		<td></td>
+		<td>|</td>
+		<td></td>
+		<td>|</td>
+		<td></td>
+		</tr>
+
+    <tr>
+      <td></td> <!-- Celda vacía para dejar espacio -->
+      <td class="triangleup" onclick="cambiarGaleria(0);">&utrif;</td>
+      <td></td> <!-- Celda vacía para dejar espacio -->
+      <td class="triangleup" onclick="cambiarGaleria(1);">&utrif;</td>
+      <td></td> <!-- Celda vacía para dejar espacio -->
+      <td class="triangleup activo" onclick="cambiarGaleria(2);">&utrif;</td>
+      <td></td> <!-- Celda vacía para dejar espacio -->
+      <td class="triangleup" onclick="cambiarGaleria(3);">&utrif;</td>
+      <td></td> <!-- Celda vacía para dejar espacio -->
+      <td class="triangleup" onclick="cambiarGaleria(4);">&utrif;</td>
+    </tr>
+  </table>
+</div>
+	<nav>
+		<a href="tattoo.html" onmouseover="aplicarHover(1);"onmouseout="quitarHover(1);" id="e1"><strong>TATTOO</strong></a> 
+		<td></td>
+		<a href="fineart.html" onmouseover="aplicarHover(2);"onmouseout="quitarHover(2);" id="e2">FINE ART</a>
+		<td></td>
+		<a href="digital.html" onmouseover="aplicarHover(3);" onmouseout="quitarHover(3);" id="e3">DIGITAL</a></nav>
+			
+</header>
+
+<br>
+
+   <div class="carrousel">
+		<div class="visor">
+			<!-- 2000 -2010 -->
+			<div class="fila">
+			<div class="column">		
+			</div>
+			<div class="column">
+			</div>
+			</div>
+			<!-- fin  2000 -2010 -->
+			<!-- 2010 -2020 -->
+			<div class="fila">
+				<div class="column">
+					<a href="expo.html?seccion=tattoo&anio=2010&img=44">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/44.png" alt="Wolf Rose Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=37">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/37.png" alt="Maktub Lettering Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=36">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/36.png" alt="Tattoo Lettering: La vita è bella" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=29">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/29.png" alt="Finger Tattoo lettering" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=28">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/28.png" alt="Realistic Bouquet of Flowers Fine Line Tattoo Watercolor" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=21">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/21.png" alt="Black Line Tattoo Sketch of the Bunquers del Carmel" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=20">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/20.png" alt="Skull Knife and Roots Black Line Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=13">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/13.png" alt="Runes Viking Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=12">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/12.png" alt="Old Dirty Bastard Portrait Sketch Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=5">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/5.png" alt="Fairy Fantasy Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=4">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/4.png" alt="Fishes scales Flowers Tattoo arround the Forearm" loading="lazy"></a>
+					</div>
+
+
+					<div class="column">
+					<a href="expo.html?seccion=tattoo&anio=2010&img=43">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/43.png" alt="Rose Tattoo Crosshatching Fineline Art" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=38">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/38.png" alt="Finger Tattoo Lettering" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=35">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/35.png" alt="Dream Catcher Tattoo Ribs" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=30">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/30.png" alt="Wild Life lettering Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=27">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/27.png" alt="Flowers Tattoo Watercolors Fineline" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=22">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/22.png" alt="Blackline Tattoo Landscape Moon Tree Bunquers del Carmel" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=19">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/19.png" alt="Anchor Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=14">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/14.png" alt="Nordic Tattoo Viking" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=11">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/11.png" alt="Legião Urbana Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=6">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/6.png" alt="Brush Stoke Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=3">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/3.png" alt="Flower Lilium Buterfly Tattoo" loading="lazy"></a>
+					</div>
+
+					<div class="column">
+					<a href="expo.html?seccion=tattoo&anio=2010&img=42">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/42.png" alt="Lettering tattoo Forearm Side" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=39">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/39.png" alt="Biomechanical Hamsa and Lotus" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=34">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/34.png" alt="Borriquero Thistle Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=31">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/31.png" alt="Lettering tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=26">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/26.png" alt="ACAB Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=23">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/23.png" alt="Tree Arm Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=18">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/18.png" alt="Thug Life Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=15">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/15.png" alt="Shield and Swords Viking Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=10">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/10.png" alt="Fingers Tattoo 1/2 Heart each" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=7">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/7.png" alt="Football Club Barcelona 1899 Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=2">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/2.png" alt="Phoenix Skate Anil Gupta Study Tattoo" loading="lazy"></a>
+					</div>
+
+
+					<div class="column">
+					<a href="expo.html?seccion=tattoo&anio=2010&img=41">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/41.png" alt="Biomechanical Butterfly Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=40">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/40.png" alt="Mithological Bastet Cat Horus Eye Footprints Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=33">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/33.png" alt="Spider Web Tattoo Elbow" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=32">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/32.png" alt="Lettering Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=25">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/25.png" alt="Lettering 1952 Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=24">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/24.png" alt="Joy Division Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=17">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/17.png" alt="Kandinsky Tattoo under The Chest" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=16">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/16.png" alt="Figure Crosshatching Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=9">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/9.png" alt="Téxun Lettering Fingers Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2010&img=8">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/8.png" alt="1899 Lettering Barça Tattoo" loading="lazy"></a>
+
+						<a href="expo.html?seccion=tattoo&anio=2010&img=1">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/1.png" alt="First Tattoo Horus Lotus Tribal" loading="lazy"></a>
+
+						<a href="expo.html?seccion=tattoo&anio=2010&img=0">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2010/0.png" alt="Artificial Skin Rotative Machine Horus Eye Lotus Tribal Flowers" loading="lazy"></a>
+					</div>
+				</div>
+				<!-- fin -2010 -2020 -->
+
+
+				<!-- 2020 -2030 -->
+				<div class="fila">
+				<div class="column">
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=54">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/54.png" alt="Bottom Half Sleeve Agatha portrait and rose color Tattoo on dark skin outdoor day after" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=47">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/47.png" alt="Bottom Half Sleeve Agatha portrait and rose color Tattoo on dark skin fresh" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=46">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/46.png" alt="Bottom Half Sleeve Agatha portrait and rose color Tattoo on dark skin fresh in the studio" loading="lazy"></a>
+					
+					<a href="expo.html?seccion=tattoo&anio=2020&img=39">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/39.png" alt="Top Half Sleeve Biorganic Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=38">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/38.png" alt="Top Half Sleeve Biorganic Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=31">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/31.png" alt="Realistic Portrait Figure Rose Girl Color Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=30">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/30.png" alt="Realistic Portrait Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=23">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/23.png" alt="Happy Face 3 Fingers  Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=22">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/22.png" alt="Dragon-fly Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=15">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/15.png" alt="Saint George Mitological Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=14">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/14.png" alt="Bart Simpson Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=7">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/7.png" alt="Dürer Geometry Flowers Fineline Tattoo Composition" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=6">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/6.png" alt="Bulldog Tattoo" loading="lazy"></a>
+
+				</div>
+
+
+
+				<div class="column">
+					<a href="expo.html?seccion=tattoo&anio=2020&img=53">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/53.png" alt="Bottom Half Sleeve Agatha portrait and rose color Tattoo on dark skin outdoor day after" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=48">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/48.png" alt="Bottom Half Sleeve Agatha portrait and rose color Tattoo on dark skin outdoor day after" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=45">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/45.png" alt="Bottom Half Sleeve Agatha portrait and rose color Tattoo on dark skin fresh in the studio" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=40">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/40.png" alt="Top Half Sleeve Biorganic Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=37">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/37.png" alt="Top Half Sleeve Biorganic Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=32">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/32.png" alt="in progress... Surrealistic Tattoo arm" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=29">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/29.png" alt="Little Realistic Dog Tattoo" loading="lazy"></a>
+					
+					<a href="expo.html?seccion=tattoo&anio=2020&img=24">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/24.png" alt="Surrealistic Flower portrait Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=21">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/21.png" alt="Realistic  Portrait Lettering Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=16">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/16.png" alt="Catrina Rasta Portrait with a Rose" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=13">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/13.png" alt="Lettering Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=8">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/8.png" alt="VIKING TATTO Top half sleeve" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=5">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/5.png" alt="4 realistic Flowers under and around the Hip" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=0">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/0.png" alt="Seashell Realistic Tattoo" loading="lazy"></a>
+				</div>
+
+
+
+				<div class="column">
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=52">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/52.png" alt="Bottom Half Sleeve Agatha portrait and rose color Tattoo on dark skin outdoor day after" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=49">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/49.png" alt="Bottom Half Sleeve Agatha portrait and rose color Tattoo on dark skin outdoor day after" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=44">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/44.png" alt="Top Half Sleeve Biorganic Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=41">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/41.png" alt="Top Half Sleeve Biorganic Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=36">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/36.png" alt="Top Half Sleeve Biorganic Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=33">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/33.png" alt="Dutch and English lettering legs" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=28">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/28.png" alt="Archer Fire background Tattoo arm" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=25">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/25.png" alt="Harry Potter Bridge The Invisibility Cloak, the Elder Wand and the Resurrection Stone Tattoo " loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=20">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/20.png" alt="Wave Sun Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=17">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/17.png" alt="Snail Tattoo Lettering" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=12">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/12.png" alt="Lettering Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=9">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/9.png" alt="Rotweiler Rose Montserrat Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=4">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/4.png" alt="4 Heads Tattoo Leg" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=1">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/1.png" alt="Cross Christ Inri Jesus Tattoo" loading="lazy"></a>
+
+				</div>
+
+
+
+					<div class="column">
+
+					
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=50">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/50.png" alt="Bottom Half Sleeve Agatha portrait and rose color Tattoo on dark skin outdoor day after" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=43">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/43.png" alt="Top Half Sleeve Biorganic Tattoo closeup" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=42">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/42.png" alt="Top Half Sleeve Biorganic Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=35">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/35.png" alt="Top elbow brain plant Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=34">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/34.png" alt="Healed Tattoo Portait Inner Forearm" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=27">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/27.png" alt="Archer Fire Background Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=26">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/26.png" alt="Phoenix Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=19">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/19.png" alt="butterfly Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=18">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/18.png" alt="Shenlong Dragon Ball Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=11">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/11.png" alt="Barça Shield" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=10">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/10.png" alt="Plant Eye Roots Tears Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=3">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/3.png" alt="Horseshoe Tattoo" loading="lazy"></a>
+
+					<a href="expo.html?seccion=tattoo&anio=2020&img=2">
+					<img src="https://marcyperlaan.github.io/migaleria/tattoo/2020/2.png" alt="Arabic Lettering Tattoo Legs" loading="lazy"></a>
+
+				</div>
+				</div>
+			<!-- fin  2020 -2030 -->
+
+			<!-- 2030 -2040 -->
+			<div class="fila">
+				</div>
+			<!-- fin  2030 -2040 -->
+
+
+			<!-- 2040 -2050 -->
+			<div class="fila">
+			</div>
+			<!-- fin  2040 -2050 -->
+		</div>
+	</div><!--FIN Carrusel -->
+	</div>
+
+
+
+<script src="js/main.js"></script>
+
+<script type="text/javascript">
+	//Para que la galería empiece en 2010 -2020
+	cambiarGaleria(2);
+
+
+	
+
+	function aplicarHover(seccion) {
+    var elemento = document.getElementById('e' + seccion);
+    
+        var textoFooter = document.getElementById('textoFooter');
+        if (textoFooter) {
+            textoFooter.innerHTML = textos[seccion - 1];
+        }
+    }
+
+
+function quitarHover(seccion) {
+    var elemento = document.getElementById('e' + seccion);
+    if (elemento) {
+       
+        var textoFooter = document.getElementById('textoFooter');
+        if (textoFooter) {
+            textoFooter.innerHTML = '';
+        }
+    }
+}
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
