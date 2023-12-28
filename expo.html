@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>expo</title>
+
+  <link rel="stylesheet" type="text/css" href="css/comun.css">
+	<link rel="stylesheet" type="text/css" href="css/expo.css">
+
+<style>
+.Logow img:hover{
+    transform: rotate(-360deg);
+    transition: all 1.5s;
+    }
+
+
+</style>
+</head>
+
+
+<body>
+<header>
+      <a href="index.html" class="Logow" id="logow">
+      <img src="https://marcyperlaan.github.io/migaleria/comun/Logow.png" alt="Logo Marc Yperlaan"></a>
+    
+      <nav class="menuPrincipal">
+        <ul>
+        <li><a href="tattoo.html" id="e1" class="tattoo-link">TATTOO</a></li>
+
+          <li><a href="fineart.html" id="e2" class="fine-art-link">FINE ART</a></li>
+
+        <li><a href="digital.html" id="e3" class="digital-link">DIGITAL</a></li>
+        </ul>
+      </nav> 
+</header>
+
+
+<main>
+<img id="imagenPrincipal" src="" ondragstart="dragStart(event);">
+
+<div class="flechaIzquierda">
+<img src="https://marcyperlaan.github.io/migaleria/comun/izquierda.png" onclick="getImagen(-1);" alt="arrow left"width="9%">
+</div>
+
+<div class="flechaDerecha">
+<img src="https://marcyperlaan.github.io/migaleria/comun/derecha.png" onclick="getImagen(1);" alt="arrow right" width="9%">
+</div>
+</main>
+
+
+<script type="text/javascript">
+ const imagesData = {
+  "tattoo": {
+    "2010": [
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/0.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/1.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/2.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/3.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/4.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/5.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/6.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/7.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/8.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/9.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/10.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/11.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/12.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/13.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/14.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/15.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/16.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/17.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/18.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/19.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/20.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/21.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/22.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/23.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/24.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/25.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/26.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/27.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/28.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/29.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/30.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/31.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/32.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/33.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/34.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/35.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/36.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/37.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/38.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/39.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/40.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/41.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/42.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/43.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2010/44.png",
+      // Add more images for the "tattoo" section here
+    ],
+    // Add more years if needed
+    "2020": [
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/0.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/1.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/2.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/3.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/4.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/5.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/6.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/7.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/8.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/9.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/10.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/11.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/12.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/13.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/14.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/15.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/16.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/17.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/18.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/19.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/20.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/21.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/22.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/23.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/24.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/25.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/26.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/27.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/28.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/29.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/30.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/31.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/32.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/33.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/34.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/35.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/36.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/37.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/38.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/39.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/40.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/41.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/42.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/43.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/44.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/45.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/46.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/47.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/48.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/49.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/50.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/51.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/52.png",
+      "https://marcyperlaan.github.io/migaleria/tattoo/2020/53.png",
+     
+      ],
+  },
+  "fineart": {
+    // Define data for "fineart" section similarly
+
+"2000": [
+      "https://marcyperlaan.github.io/migaleria/fineart/2000/1.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2000/2.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2000/3.png",
+     
+      // Add more images for the "tattoo" section here
+    ],
+    // Add more years if needed
+    "2010": [
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/0.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/1.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/2.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/3.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/4.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/5.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/6.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/7.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/8.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/9.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/10.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/11.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/12.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/13.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/14.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/15.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/16.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/17.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/18.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/19.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/20.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/21.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/22.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/23.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/24.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/25.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/26.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/27.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/28.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/29.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/30.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/31.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/32.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/33.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/34.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/35.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/36.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/37.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/38.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/39.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/40.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/41.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/42.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/43.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/44.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/45.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/46.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/47.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/48.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/49.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/50.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/51.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/52.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/53.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/54.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/55.png",
+      "https://marcyperlaan.github.io/migaleria/fineart/2010/56.png",
+      ],
+
+ "2020": [
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/0.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/1.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/2.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/3.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/4.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/5.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/6.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/7.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/8.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/9.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/10.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/11.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/12.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/13.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/14.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/15.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/16.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/17.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/18.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/19.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/20.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/21.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/22.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/23.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/24.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/25.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/26.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/27.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/28.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/29.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/30.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/31.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/32.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/33.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/34.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/35.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/36.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/37.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/38.png",
+      "https://marcyperlaan.github.io/migaleria/fineartv2/2020/39.png",
+     "https://marcyperlaan.github.io/migaleria/fineartv2/2020/40.png",
+      
+       ],
+
+
+
+
+
+
+
+
+
+
+
+
+  },
+  "digital": {
+    // Define data for "digital" section similarly
+
+"2010": [
+      "https://marcyperlaan.github.io/migaleria/digital/2010/0.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/1.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/2.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/3.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/4.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/5.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/6.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/7.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/8.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/9.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/10.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/11.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/12.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/13.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/14.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/15.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/16.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/17.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/18.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/19.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/20.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/21.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/22.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/23.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/24.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/25.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/26.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/27.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/28.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/29.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/30.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2010/31.png",
+],
+
+
+ "2020": [
+      "https://marcyperlaan.github.io/migaleria/digital/2020/0.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2020/1.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2020/2.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2020/3.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2020/4.png",
+      "https://marcyperlaan.github.io/migaleria/digital/2020/5.png",
+     
+       ],
+
+
+
+
+
+
+
+
+
+
+
+
+  }
+};
+
+
+
+
+// Función para cargar la primera imagen
+        function loadInitialImage() {
+         const currentURL = new URL(window.location.href);
+            const seccion = currentURL.searchParams.get("seccion");
+            const anio = currentURL.searchParams.get("anio");
+            const img = parseInt(currentURL.searchParams.get("img"));
+
+            if (imagesData[seccion] && imagesData[seccion][anio] && imagesData[seccion][anio][img]) {
+                const currentImage = document.getElementById("imagenPrincipal");
+                currentImage.src = imagesData[seccion][anio][img];
+            }
+        }
+
+
+
+
+    function getImagen(direction) {
+    const currentURL = new URL(window.location.href);
+    const seccion = currentURL.searchParams.get("seccion") || "tattoo";
+    const anio = currentURL.searchParams.get("anio") || "2010";
+    let img = parseInt(currentURL.searchParams.get("img")) || 0;
+
+    img += direction;
+
+    const imagesInSection = imagesData[seccion][anio];
+    const totalImages = imagesInSection ? imagesInSection.length : 0;
+
+    if (img < 0) {
+        img = 0;
+    } else if (img >= totalImages) {
+        // Si img está fuera del rango, no hagas nada
+        return;
+    }
+
+    const currentImage = document.getElementById("imagenPrincipal");
+    if (imagesInSection && imagesInSection[img]) {
+        const newImgSrc = imagesInSection[img];
+        currentImage.src = newImgSrc;
+        updateNavigationArrows();
+
+        currentURL.searchParams.set("img", img);
+        window.history.replaceState({}, "", currentURL.href);
+    }
+}
+
+
+
+// Función para obtener la URL actual y actualizar las flechas
+       function updateNavigationArrows() {
+            const currentURL = new URL(window.location.href);
+            const seccion = currentURL.searchParams.get("seccion") || "tattoo";
+            const anio = currentURL.searchParams.get("anio") || "2010";
+            const img = parseInt(currentURL.searchParams.get("img")) || 0;
+
+            const imagesInSection = imagesData[seccion] ? imagesData[seccion][anio] : null;
+            const totalImages = imagesInSection ? imagesInSection.length : 0;
+
+            const flechaIzquierda = document.querySelector('.flechaIzquierda');
+            const flechaDerecha = document.querySelector('.flechaDerecha');
+
+            if (img === 0) {
+                flechaIzquierda.style.display = 'none';
+            } else {
+                flechaIzquierda.style.display = 'block';
+            }
+
+            if (img === totalImages - 1 || totalImages === 0) {
+                flechaDerecha.style.display = 'none';
+            } else {
+                flechaDerecha.style.display = 'block';
+            }
+        }
+
+    
+
+
+
+
+
+    // Carga la primera imagen cuando se carga la página
+    window.onload = function () {
+      const currentURL = new URL(window.location.href);
+      const seccion = currentURL.searchParams.get("seccion");
+      const anio = currentURL.searchParams.get("anio");
+      const img = currentURL.searchParams.get("img");
+
+      if (imagesData[seccion] && imagesData[seccion][anio] && imagesData[seccion][anio][img]) {
+        const currentImage = document.getElementById("imagenPrincipal");
+        currentImage.src = imagesData[seccion][anio][img];
+        updateNavigationArrows();
+      }
+    };
+
+
+function isImageValid(seccion, anio, img) {
+  // Verifica si la imagen existe en la estructura imagesData
+  return (
+    imagesData[seccion] &&
+    imagesData[seccion][anio] &&
+    imagesData[seccion][anio][img]
+  );
+}
+
+
+
+  
+function dragStart(event) {
+  const offsetX = event.clientX - event.target.getBoundingClientRect().left;
+  const width = event.target.clientWidth;
+
+  // Calcula la dirección del arrastre
+  if (offsetX < width / 2) {
+    // Si el arrastre comienza en la mitad izquierda, llama a getImagen con +1
+    getImagen(+1);
+  } else {
+    // Si el arrastre comienza en la mitad derecha, llama a getImagen con -1
+    getImagen(-1);
+  }
+}
+
+function touchStart(event) {
+  const touch = event.touches[0];
+  const offsetX = touch.clientX - event.target.getBoundingClientRect().left;
+  const width = event.target.clientWidth;
+
+  // Registra la posición inicial del toque
+  event.target.dataset.startX = offsetX;
+}
+
+function touchMove(event) {
+  if (event.touches.length === 1) {
+    const touch = event.touches[0];
+    const startX = parseFloat(event.target.dataset.startX);
+    const currentX = touch.clientX - event.target.getBoundingClientRect().left;
+    const width = event.target.clientWidth;
+
+    // Calcula la dirección del arrastre
+    if (currentX < startX - width / 4) {
+      // Si el toque se mueve hacia la izquierda, llama a getImagen con +1
+      getImagen(+1);
+    } else if (currentX > startX + width / 4) {
+      // Si el toque se mueve hacia la derecha, llama a getImagen con -1
+      getImagen(-1);
+    }
+  }
+}
+
+function touchEnd(event) {
+  // Limpia la posición inicial del toque
+  delete event.target.dataset.startX;
+}
+
+// Agrega eventos táctiles a tu elemento
+const elementToDrag = document.getElementById("imagenPrincipal");
+elementToDrag.addEventListener("touchstart", touchStart);
+elementToDrag.addEventListener("touchmove", touchMove);
+elementToDrag.addEventListener("touchend", touchEnd);
+
+// Función getImagen aquí
+function getImagen(direction) {
+  // Implementa la lógica para cambiar la imagen según la dirección
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Obtener la URL de la imagen actual
+const currentImageSrc = document.getElementById("imagenPrincipal").src;
+
+// Verificar si la URL de la imagen contiene "fineart"
+if (currentImageSrc.includes("fineart")) {
+  // Aplicar los estilos a los enlaces de Fine Art
+  const fineArtLinks = document.querySelectorAll('.fine-art-link');
+  fineArtLinks.forEach(function(link) {
+    link.style.textDecoration = "none";
+
+
+
+      link.style.backgroundColor = "white";
+    link.style.color = "black";
+  });
+} else if (currentImageSrc.includes("digital")) {
+  // Aplicar los estilos a los enlaces de Digital
+  const digitalLinks = document.querySelectorAll('.digital-link');
+  digitalLinks.forEach(function(link) {
+    link.style.textDecoration = "none";
+    link.style.backgroundColor = "white";
+    link.style.color = "black";
+  });
+} else if (currentImageSrc.includes("tattoo")) {
+  // Aplicar los estilos a los enlaces de Tattoo
+  const tattooLinks = document.querySelectorAll('.tattoo-link');
+  tattooLinks.forEach(function(link) {
+    link.style.textDecoration = "none";
+    link.style.backgroundColor = "white";
+    link.style.color = "black";
+  });
+}
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  
+  document.getElementById("imagenPrincipal").src='https://marcyperlaan.github.io/migaleria'+'/'+urlParams.get('seccion')+'/'+urlParams.get('anio')+'/'+urlParams.get('img')+".png";
+
+  if(urlParams.get('img')>1){
+    document.querySelector('.flechaIzquierda').style.display='block';
+  }
+
+  function getImagen(incremento){
+
+      window.location = 'expo.html?seccion='+urlParams.get('seccion')+'&anio='+urlParams.get('anio')+'&img='+(parseInt(urlParams.get('img'))+incremento);
+  }
+
+     // Add an event listener to the body
+      //  document.body.addEventListener('click', () => {
+            // Navigate back to the previous page
+         //   window.history.back();
+       // });
+
+</script>
+
+	</body>
+	</html>
